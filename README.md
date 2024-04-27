@@ -1,5 +1,5 @@
 # EbookServerSide
- ebook项目的后端代码
+ 上海交通大学互联网应用开发技术（课程号：SE2321）课程大作业ebook项目的后端代码
 # 关于自学速通java后的一些小心得
 
 **挂一个**    [相对较好的速通学习网址](https://www.bilibili.com/video/BV1ur4y1G7Dc?p=75&vd_source=ebf74c71bea99fa48cee422be6987633)  
