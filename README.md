@@ -52,7 +52,7 @@ any way , 以上所描述的规范就是javabean这一项所要求的基础规�
 //接口
 interface A{
     void print();
-    void test(){system.out.println("test");}
+    default void test(){system.out.println("test");}
 }
 
 //实现类
