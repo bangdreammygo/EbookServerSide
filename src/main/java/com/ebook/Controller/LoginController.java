@@ -1,14 +1,11 @@
 package com.ebook.Controller;
-
-
 import com.ebook.dto.LoginJavaBean;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.ebook.dto.UserInfoJavaBean;
+import org.springframework.web.bind.annotation.*;
 
 //这个控制器类用来管理用户的登录信息和状态
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 public class LoginController {
     //首先创建一个对象记录所有的登录信息
     private LoginJavaBean LoginInformation;
@@ -39,10 +36,11 @@ public class LoginController {
 
     //////该函数用以接收前端发过来的参数，来设置用户名和密码（并不会写，只是先稍微打个demo）
     @RequestMapping("/login/setinfo")
-    public boolean setinfo(String username, String password){
+    public boolean setinfo(@RequestBody UserInfoJavaBean User){
         LoginInformation.setLoginState(true);
-        LoginInformation.setPassword(password);
-        LoginInformation.setUsername(username);
+        LoginInformation.setPassword(User.getPassword());
+        LoginInformation.setUsername(User.getUsername());
+        System.out.println(User.getUsername());
         return  true;
     }
 

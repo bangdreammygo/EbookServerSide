@@ -5,18 +5,30 @@ package com.ebook.dto;
 
 public class BookJavaBean {
     ///////////////私有字段区域
+    //书籍id
     private int id;
+    //书名
     private String name;
-    private int num;
+    //库存
+    private int rest;
+    //售价
     private double price;
+    //作者
     private String author;
+    //简介
     private String brief;
+    //目前还没有，但是之后会有的书籍图片
+    //private String cover;
+
+
+
+
     //////////////////////构造函数
     //有参构造
-    public BookJavaBean(int id, String name, int num, double price, String author, String brief){
+    public BookJavaBean(int id, String name, int rest, double price, String author, String brief){
         this.id = id;
         this.name = name;
-        this.num = num;
+        this.rest = rest;
         this.price = price;
         this.author = author;
         this.brief = brief;
@@ -25,6 +37,10 @@ public class BookJavaBean {
     public BookJavaBean(){
 
     }
+    //只需要名字的情况
+    public BookJavaBean(String name){
+        this.name = name;
+    }
     //////////////////////setter
     public  void setId(int id){
         this.id=id;
@@ -32,8 +48,8 @@ public class BookJavaBean {
     public void setName(String name){
         this.name=name;
     }
-    public void setNum(int num) {
-        this.num = num;
+    public void setRest(int rest){
+        this.rest=rest;
     }
     public void setPrice(double price) {
         this.price = price;
@@ -51,8 +67,8 @@ public class BookJavaBean {
     public String getName() {
         return name;
     }
-    public int getNum() {
-        return num;
+    public int getRest() {
+        return rest;
     }
     public double getPrice() {
         return price;
